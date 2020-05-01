@@ -2,7 +2,7 @@ const express = require('express')
 const bp = require('body-parser')
 const https = require('https')
 const app = express()
-const port = 3000
+const port = process.env.PORT
 const date = require(__dirname + "/date.js")
 
 const items = []
@@ -53,6 +53,6 @@ app.get("/about", function(req,res){
 
 
 
-app.listen (port, function(req,res){
+app.listen (port || 3000, function(req,res){
   console.log("Server running at port " + port)
 })

@@ -8,7 +8,7 @@ exports.getDate = function(){
     month: 'long'
   }
 
-  return today.toLocaleDateString(undefined,options)
+  return today.toLocaleDateString('en-US',options)
 }
 
 exports.getDay = function (){
@@ -18,5 +18,5 @@ exports.getDay = function (){
     weekday: 'long',
   }
 
-  return today.toLocaleDateString(undefined,options)
+  return today.toLocaleDateString('en-US',options)
 }
